@@ -187,12 +187,11 @@ table {
 // Header & Footer
 //
 #site-header {
-  position: fixed;
+  position: relative;
   z-index: 1;
-  bottom: 0;
   width: 100%;
   box-sizing: border-box;
-  box-shadow: -1px -2px 3px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.45);
   background-color: $dark-grey;
 }
 
@@ -248,14 +247,14 @@ table {
 }
 
 #mobile-menu {
-  position: fixed;
-  bottom: 4.8em;
+  position: absolute;
+  top: 4.8em;
   right: 1.5em;
   display: none;
   padding: .6em 1.8em;
   z-index: 1;
   box-sizing: border-box;
-  box-shadow: -1px -2px 3px 0px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.45);
   background-color: $dark-grey;
 
   ul {
@@ -270,7 +269,7 @@ table {
 #site-footer {
   text-align: center;
   font-size: .9em;
-  margin-bottom: 96px;
+  margin-bottom: 64px;
   margin-top: 64px;
 
   p {

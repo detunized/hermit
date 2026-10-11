@@ -1,4 +1,4 @@
-	<header id="site-header" class="animated slideInUp faster">
+	<header id="site-header">
 		<div class="hdr-wrapper section-inner">
 			<div class="hdr-left">
 				<div class="site-branding">
@@ -6,7 +6,7 @@
 				</div>
 				<nav class="site-nav hide-in-mobile">
 					{{- range .Site.Menus.main }}
-					<a href="{{ .URL | absLangURL}}">{{ .Name }}</a>
+					<a href="{{ .URL | absLangURL}}"{{ if strings.HasPrefix $.RelPermalink .URL }} class="active"{{ end }}>{{ .Name }}</a>
 					{{- end }}
 				</nav>
 			</div>
@@ -27,7 +27,7 @@
 	<div id="mobile-menu" class="animated fast">
 		<ul>
 			{{- range .Site.Menus.main }}
-			<li><a href="{{ .URL | absLangURL }}">{{ .Name }}</a></li>
+			<li><a href="{{ .URL | absLangURL }}"{{ if strings.HasPrefix $.RelPermalink .URL }} class="active"{{ end }}>{{ .Name }}</a></li>
 			{{- end }}
 		</ul>
 	</div>
